@@ -1,6 +1,7 @@
 package basicweb;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,6 +34,8 @@ public class DoubleClickOnSearchBar {
 		li.click();
 		WebElement check_sy= driver.findElement(By.xpath("//*[@id=\"post-36481\"]/div/div/div/div/section[1]/div/div/div/div/div/section/div/div/div[1]/div/div/div/div/a/div[1]/div[2]/span"));
 		check_sy.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,800)", "");
 		
 		// TODO Auto-generated method stub
 
